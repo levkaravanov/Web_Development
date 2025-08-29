@@ -1,8 +1,11 @@
-import Button from './Button/Button';
+import Card from './Card';
+
 function App() {
   return (
     <div>
-      <Button />
+      <Card />
+      <Card />
+      <Card />
     </div>
   )
 }
