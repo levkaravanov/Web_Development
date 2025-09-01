@@ -10,7 +10,7 @@ function App() {
         {
           booksData.map(
             (book) => (
-              <Book book={book} />))
+              <Book key={book.id} book={book} />))
         }
       </div>
     </div>

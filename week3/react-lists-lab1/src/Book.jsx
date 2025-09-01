@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Book({ book }) {
+function Book(props) {
+    const { book } = props;
     return (
         <div className="book">
             <h2 className="book-title">{book.title}</h2>
