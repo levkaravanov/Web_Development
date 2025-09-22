@@ -1,0 +1,24 @@
+{
+  "name": "videos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "basic-server.js",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "nodemonConfig": {
+    "delay": 2000,
+    "ignore": [
+      "docs/*",
+      "dist/*",
+      "*/*.css"
+    ]
+  },
+  "scripts": {
+    "watch": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
