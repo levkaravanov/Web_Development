@@ -4,10 +4,9 @@ import './App.css';  // Add CSS if needed
 import useLocalStorage from './useLocalStorage';
 
 const AppWithCustomHook = () => {
-  const nameInput = useField('text');
-  const bornInput = useField('date');
-  const heightInput = useField('number');
   const [name, setName] = useLocalStorage('name', '');
+  const [born, setBorn] = useLocalStorage('born', '');
+  const [height, setHeight] = useLocalStorage('height', '');
   const handleSubmit = (event) => {
 
 
@@ -27,16 +26,24 @@ const AppWithCustomHook = () => {
         </div>
         <br />
         <div>
-          Birthdate: <input {...bornInput} />
+          Birthdate: <input
+            type="date"
+            value={born}
+            onChange={(e) => setBorn(e.target.value)}
+          />
         </div>
         <br />
         <div>
-          Height: <input {...heightInput} />
+          Height: <input
+            type="number"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+          />
         </div>
         <button type="submit">Submit</button>
       </form>
       <div>
-        {nameInput.value} {bornInput.value} {heightInput.value}
+        {name} {born} {height}
       </div>
       <div>
 
